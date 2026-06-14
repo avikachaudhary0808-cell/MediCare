@@ -1,76 +1,85 @@
-# MediCare - Full-Stack Health Management App
+# 🏥 MediCare – AI-Powered Health Management System
 
-A modern, full-stack healthcare web application built with **React + Vite** on the frontend and **Spring Boot (Java)** on the backend. Features include an AI-powered symptom checker, medication reminders, and doctor appointment booking.
+## Overview
 
-## Tech Stack
+MediCare is a modern full-stack healthcare web application designed to help users manage their daily health activities through an intuitive dashboard, AI-assisted symptom analysis, medication reminders, and doctor appointment booking.
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React.js + Vite |
-| Backend | Spring Boot (Java 17) |
-| Database | H2 (embedded, file-based) |
-| AI | Google Gemini API |
-| Auth | Firebase Auth |
-| UI | Custom CSS with glassmorphism design |
-| Charts | Recharts |
+The project demonstrates full-stack development using React and Spring Boot while integrating authentication and AI capabilities.
+
+---
 
 ## Features
 
-- **Dashboard** — Daily progress tracking with circular score and weekly trend charts
-- **AI Symptom Checker** — Chat with a virtual AI doctor and run diagnostic analysis
-- **Reminders** — Manage medication schedules and health tasks with checkboxes
-- **Doctor Booking** — Browse specialists and book simulated appointments
-- **Firebase Auth** — Email/password login and registration
+* 📊 Health Dashboard with progress tracking
+* 🤖 AI Symptom Checker powered by Google Gemini
+* 💊 Medication Reminder Management
+* 👨‍⚕️ Doctor Appointment Booking System
+* 🔐 Secure User Authentication using Firebase
+* 📈 Interactive Charts and Analytics
+* 📱 Responsive and Modern Glassmorphism UI
+
+---
+
+## Tech Stack
+
+| Category       | Technology                  |
+| -------------- | --------------------------- |
+| Frontend       | React.js, Vite              |
+| Backend        | Spring Boot (Java 17)       |
+| Database       | H2 Database                 |
+| Authentication | Firebase Authentication     |
+| AI Integration | Google Gemini API           |
+| Charts         | Recharts                    |
+| Styling        | CSS3 (Glassmorphism Design) |
+
+---
 
 ## Project Structure
 
 ```
 MediCare/
-├── backend/                     # Spring Boot REST API
-│   ├── src/main/java/com/example/demo/
-│   │   ├── controller/          # REST endpoints
-│   │   ├── model/               # JPA entities
-│   │   ├── repository/          # Data access layer
-│   │   └── service/             # Business logic + AI
-│   └── src/main/resources/
-│       └── application.properties
-├── frontend/                    # React + Vite app
-│   ├── src/
-│   │   ├── components/          # Reusable UI components
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── SymptomChecker.jsx
-│   │   │   ├── Reminders.jsx
-│   │   │   ├── DoctorBooking.jsx
-│   │   │   └── AuthModal.jsx
-│   │   ├── pages/               # Static page views
-│   │   ├── services/            # API + Firebase config
-│   │   ├── App.jsx              # Root component (wires everything)
-│   │   └── App.css / index.css
+├── backend/
+│   ├── controller/
+│   ├── service/
+│   ├── repository/
+│   ├── model/
+│   └── application.properties
+│
+├── frontend/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── App.jsx
 │   └── package.json
+│
 └── README.md
 ```
 
-## How to Run
+---
 
-### Prerequisites
-- Node.js 18+
-- Java 17+
-- Maven 3.x
-- Firebase project credentials
+## Installation
 
-### Start the Backend
+### Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/MediCare.git
+cd MediCare
+```
+
+### Backend
 
 ```bash
 cd backend
 ./mvnw spring-boot:run
 ```
 
-Backend runs at **http://localhost:8080**
+Runs on:
 
-### Start the Frontend
+```
+http://localhost:8080
+```
 
-In a new terminal:
+### Frontend
 
 ```bash
 cd frontend
@@ -78,44 +87,55 @@ npm install
 npm run dev
 ```
 
-Frontend runs at **http://localhost:5173**
+Runs on:
 
-## Backend Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/health` | Health check |
-| GET | `/api/dashboard/progress` | Dashboard progress data |
-| GET | `/api/reminders` | List reminders (optional `?date=`) |
-| POST | `/api/reminders` | Create a new reminder |
-| PUT | `/api/reminders/{id}/toggle` | Toggle reminder completion |
-| DELETE | `/api/reminders/{id}` | Delete a reminder |
-| GET | `/api/doctors` | List doctors (optional `?specialty=`) |
-| GET | `/api/bookings` | List appointments |
-| POST | `/api/bookings` | Create an appointment |
-| POST | `/api/symptom-check` | Analyze symptoms |
-| POST | `/api/chat` | AI chat with history |
-
-## Interview Talking Points
-
-> **"I built a full-stack healthcare web app called MediCare."**
->
-> - Frontend: **React.js** with component-based architecture
-> - Backend: **Spring Boot REST API** (Java)
-> - Database: **H2 with JPA/Hibernate**
-> - AI: **Google Gemini API** for symptom analysis and chat
-> - Authentication: **Firebase Auth**
-> - UI: Custom **CSS glassmorphism** design
-
-Each feature lives in its own small component file (50-150 lines), making the codebase easy to explain and maintain.
-
-## Portfolio Tips
-
-1. Push this repo to GitHub with this README at the root
-2. Take screenshots of each tab (Dashboard, Symptom Checker, Reminders, Doctors)
-3. Add screenshots section to this README
-4. Link the live demo (Vercel/Netlify) if deployed
+```
+http://localhost:5173
+```
 
 ---
 
-> *Note: This is an educational project. The symptom checker and AI chat provide informational insights only, not medical advice.*
+## REST API Endpoints
+
+| Method | Endpoint                   |
+| ------ | -------------------------- |
+| GET    | /api/health                |
+| GET    | /api/dashboard/progress    |
+| GET    | /api/reminders             |
+| POST   | /api/reminders             |
+| PUT    | /api/reminders/{id}/toggle |
+| DELETE | /api/reminders/{id}        |
+| GET    | /api/doctors               |
+| GET    | /api/bookings              |
+| POST   | /api/bookings              |
+| POST   | /api/symptom-check         |
+| POST   | /api/chat                  |
+
+---
+
+## Skills Demonstrated
+
+* Full-Stack Development
+* REST API Design
+* React Component Architecture
+* Spring Boot Backend Development
+* Firebase Authentication
+* Database Management with JPA/Hibernate
+* AI API Integration
+* Responsive UI Design
+
+---
+
+## Future Enhancements
+
+* Real appointment scheduling
+* Email/SMS reminders
+* Doctor dashboard
+* Patient history management
+* Cloud database deployment
+
+---
+
+## Disclaimer
+
+This project is intended for educational and portfolio purposes only. The AI symptom checker provides informational responses and should not be considered professional medical advice.
