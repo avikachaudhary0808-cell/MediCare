@@ -1,0 +1,44 @@
+# Build outputs
+target/
+build/
+dist/
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Environment vars
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse / STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+/.nb-gradle/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+*.class
+*.jar
