@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8081/api';
+const BASE_URL = 'http://localhost:8080/api';
 
 // Helper to make fetch calls, falling back to local storage simulation on network failure
 const fetchJson = async (endpoint, options = {}) => {
